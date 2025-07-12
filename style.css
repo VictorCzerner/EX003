@@ -1,0 +1,214 @@
+@charset "URF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+
+:root{
+    --corDetalhe: rgb(16, 53, 102);
+    --corHeader:rgb(10, 16, 26);
+    --cor2: #7708A6;
+    --cor3: #416a74;
+    --cor4: #07C7F2;
+    --corFundo: rgb(14, 23, 36);
+    --cor6: #404d50;
+
+    --fonte: "Roboto Slab", Arial, Helvetica, sans-serif;
+
+}
+*{
+    color: rgb(156, 156, 156);
+}
+html, body {
+  height: 100vh;
+  margin: 0;
+  background-color: var(--corFundo);
+ 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  
+}
+header{
+    background-color: var(--corHeader);
+
+    padding: 10px;
+    border-bottom: 1px solid var(--corDetalhe);
+
+}
+header>nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+header>nav>a>img{
+    height: 30px;
+    width: auto;
+}
+#logo{
+    display: inline-block;
+    padding-right: 100px;
+    padding-left: 10px;
+    margin: 1px;
+}
+#botao{
+    font-family: var(--fonte);
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+
+    margin: 2px;
+    border: 1px solid white;
+    background-color: var(--corHeader);
+    color: white;
+    text-decoration: none;
+    
+}
+
+#botao:hover {
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.342);
+    background-color: var(--cor3);
+    
+    border: 2px solid var(--cor4);
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+main{
+    padding: 10px;
+    margin: auto;
+    min-width: 320px;
+    max-width: 1200px;
+    border: 1px solid #5062661c;;
+
+}
+
+#inicio{
+
+    height: 280px;
+     background-image: 
+    linear-gradient(to right, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to bottom, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to left, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to top, var(--corFundo) 10%, rgba(13, 13, 13, 0) 25%),
+    radial-gradient(circle at center center, transparent 75%, var(--corFundo) 90%),
+    url('imgs/como-treinar-o-seu-dragao-1.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding-bottom: 450px;
+
+
+    border-radius: 20px;
+    overflow: hidden;
+
+  
+}
+#inicio > h1{
+    font-family: var(--fonte);
+    font-size: 2.4em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    text-shadow:  2px 2px 1px rgba(0, 0, 0, 0.342);
+    padding-top: 600px;
+    
+
+    
+    
+}
+main>h2{
+    font-family: var(--fonte);
+
+    display: block;
+    border-bottom: 1px solid var(--corDetalhe);
+    
+}
+#Trending>img{
+    border: 1px solid var(--corDetalhe);
+    border-radius: 3px;
+    margin: 2.5px;
+    width: 170px;
+    height: 250px;
+}
+#Trending>img:hover{
+    border: 3px solid var(--cor4);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.342);
+    border-radius: 3px;
+
+}
+div.video{
+    background-color:var(--cor3);
+    margin: 30px -10px 0px -50px;
+    padding: 20px;
+    padding-bottom:59%;
+    border-radius: 5px;
+    position: relative;
+}
+div.video>iframe{
+    
+    position: absolute;
+    top: 5%;
+    left: 3.85%;
+    width: 92%;
+    height: 90%;
+    border-radius: 5px;
+}
+section.str{
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--corDetalhe);
+    margin-bottom: 15px;
+
+}
+section.str>a>img{
+    height: 100px;
+    width: 100px;
+    
+}
+section.str>div{
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 0.8;
+}
+section.str>div>a{
+    color: white;
+    text-shadow:  2px 2px 1px rgba(0, 0, 0, 0.342);
+    text-decoration: none;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 0;
+    position: relative;
+    top: -10px; 
+
+}
+section.str>div>a:hover{
+    color: var(--cor3);
+    text-decoration: none;
+    font-family: var(--fonte);
+    
+}
+section.str>div>h4{
+    color: aliceblue;
+    text-decoration: none;
+    font-family: var(--fonte);
+    position: relative;
+    top: -10px; /* sobe o bloco */
+
+
+}
+section.str>div>p{
+    text-decoration: none;
+    font-family: var(--fonte);
+    position: relative;
+    top: -10px;  
+    margin-bottom: 0px;
+
+}
