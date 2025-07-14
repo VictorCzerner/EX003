@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="favicon/">
     <link rel="stylesheet" href="style.css">
 </head>
 
 
-<body>
+<body class="inicioTela">
     <Header>
-        <nav>
+        <section class="header">
             <a href="/CHJS/MODULO2/EX003/index.html" id="logo"><img src="imgs/logo1.png" alt=""></a>
+            <div class="espaço"></div>
+            <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+            <nav class="menu">
+                <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
+                <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
+                <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
+                <a href="#" id="botao">Series</a>
+                <a href="login.html" id="botao">Login</a>
+            </nav>
+        </section>
+    </Header>
+    <div class="menuP"  id="itens">
+        <nav>
             <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
             <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
             <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
             <a href="#" id="botao">Series</a>
+            <a href="login.html" id="botao">Login</a>
         </nav>
-    </Header>
+    </div>
     
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none';
+            }
+            else{
+                itens.style.display = 'flex';
+                header.style.borderBottom = "none";
+            }
+        }
+    </script>
 </body>
 </html>

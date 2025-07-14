@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="favicon/">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="inicioTela">
+    <Header>
+        <section class="header">
+            <a href="/CHJS/MODULO2/EX003/index.html" id="logo"><img src="imgs/logo1.png" alt=""></a>
+            <div class="espaço"></div>
+            <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+            <nav class="menu">
+                <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
+                <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
+                <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
+                <a href="#" id="botao">Series</a>
+                <a href="login.html" id="botao">Login</a>
+            </nav>
+        </section>
+    </Header>
+    <div class="menuP"  id="itens">
+        <nav>
+            <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
+            <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
+            <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
+            <a href="#" id="botao">Series</a>
+            <a href="login.html" id="botao">Login</a>
+        </nav>
+    </div>
+<main>
+        <h1 id="loginTitulo">Bem vindo ao Miser!</h1>
+        <section class="login">
+            
+            <Form action="cadastro.php" autocomplete="on">
+                <fieldset class="CriarLogin">
+                            <h2>Criar conta</h2>
+                            <div class="total">
+                                <p> <label for="inome">Nome:</label><br> <input type="" name="nome" id="inome" required autocomplete="username"></p>
+                            </div>
+                            <div class="total">
+                                <p><label for="iemail">E-mail:</label><br> <input type="email" name="E-mail" id="iemail" required autocomplete="email"></p>
+                            </div>
+                            <div class="total">
+                                <p><label for="idia">Data de Nascimento</label><br> <input type="date" name="dia" id="idia"></p>
+                            </div>
+                            <div>
+                                <p><label for="ifem">Sexo:</label> <br>
+                                    
+                                    <input type="radio" name="sexo" id="ifem" value="F" class="sexoI"><label for="ifem" class="sexo">Feminino</label>
+                                    <input type="radio" name="sexo" id="imas" value="M" class="sexoI"><label for="imas" class="sexo">Masculino</label>
+                                </p>
+                            </div>
+                            <div class="total">
+                                <p><label for="isenha">Senha:</label><br> <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20"></p>
+                            </div>
+                            <div class="enviar">
+                                <p>
+                                    <input type="submit" value="Enviar">
+                                </p>
+                            </div>
+                </fieldset>
+            </Form>
+            <form action="login.php" autocomplete="on">
+                <fieldset class="FazerLogin">
+                        <h2>
+                            Fazer Login
+                        </h2>
+                        <div class="total">
+                            <p><label for="iemail">E-mail:</label><br> <input type="email" name="E-mail" id="iemail" required autocomplete="email"></p>
+                        </div>
+                        <div class="total">
+                            <p><label for="isenha">Senha:</label><br> <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20"></p>
+                        </div>
+                        <div class="enviar">
+                            <p>
+                                <input type="submit" value="Enviar">
+
+                            </p>
+                        </div>
+                </fieldset>
+            </form>
+        </section>
+
+
+</main>
+
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none';
+            }
+            else{
+                itens.style.display = 'flex';
+                header.style.borderBottom = "none";
+            }
+        }
+    </script>
+</body>
+</html>

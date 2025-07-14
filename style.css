@@ -12,7 +12,8 @@
     --cor3: #416a74;
     --cor4: #07C7F2;
     --corFundo: rgb(14, 23, 36);
-    --cor6: #404d50;
+    --cor6: rgb(10, 16, 26);
+    --cor7: rgb(26, 42, 65);
 
     --fonte: "Roboto Slab", Arial, Helvetica, sans-serif;
 
@@ -20,54 +21,58 @@
 *{
     color: rgb(156, 156, 156);
 }
-html, body {
-  height: 100vh;
-  margin: 0;
-  background-color: var(--corFundo);
- 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 
-  
+
+html, body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, var(--cor7)0%, var(--corFundo)30%);
+  background-color: var(--corFundo);  
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
+
+/* ------------------ HEADER ------------------ */
 header{
     background-color: var(--corHeader);
-
     padding: 10px;
     border-bottom: 1px solid var(--corDetalhe);
-
+   
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-header>nav{
+section.header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
+    max-width: 1200px;
 
+    
 }
-header>nav>a>img{
-    height: 30px;
-    width: auto;
+section.header>a>img{
+    max-height: 50px;
+    max-width: auto;
 }
 #logo{
     display: inline-block;
-    padding-right: 100px;
-    padding-left: 10px;
-    margin: 1px;
+    
 }
 #botao{
     font-family: var(--fonte);
+    font-size: 1.4em;
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 10px;
 
-    margin: 2px;
+    margin-left: 5px;
     border: 1px solid white;
     background-color: var(--corHeader);
     color: white;
     text-decoration: none;
     
 }
-
 #botao:hover {
     box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.342);
     background-color: var(--cor3);
@@ -77,19 +82,79 @@ header>nav>a>img{
     padding-left: 10px;
     border-radius: 10px;
 }
+#burguer{
+    display: none;
+}
+div.menuP{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header>section.header>nav.menu{
+        display: none;
+    }
+    #burguer{
+        display: block;
+    }
+    div.menuP{
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--corHeader);
+        
+        position: fixed;
+        top: 74px;
+        z-index: 9;
+        width: 99vw;
+        border-bottom: 1px solid var(--corDetalhe);
+
+        box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.63);
+    }
+    div.menuP>nav{
+        display: block;
+        
+    }
+    #botao{
+        text-align: center;
+        display: block;
+        width: 85vw;
+        margin: 15px;
+    }
+}
+
+/* ------------------ MAIN ------------------ */
 main{
     padding: 10px;
     margin: auto;
-    min-width: 320px;
+    min-width: 430px;
     max-width: 1200px;
     border: 1px solid #5062661c;;
 
 }
 
+main>h1{
+    font-family: var(--fonte);
+    color: white;
+    display: block;
+    border-bottom: 1px solid var(--corDetalhe);
+    
+}
+main>h2{
+    font-family: var(--fonte);
+    color: white;
+    
+}
+
+/* ------------------ PÁGINA INICIO ------------------ */
+body.inicioTela{
+    background-image: none;
+    background-color: var(--corFundo);    
+}
+
 #inicio{
 
     height: 280px;
-     background-image: 
+    background-image: 
     linear-gradient(to right, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
     linear-gradient(to bottom, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
     linear-gradient(to left, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
@@ -101,12 +166,12 @@ main{
     background-repeat: no-repeat;
     background-position: center;
 
-    padding-bottom: 450px;
-
+    padding-bottom: 435px;
+    
 
     border-radius: 20px;
     overflow: hidden;
-
+    text-align: center;
   
 }
 #inicio > h1{
@@ -118,19 +183,96 @@ main{
     text-align: center;
     display: block;
     text-shadow:  2px 2px 1px rgba(0, 0, 0, 0.342);
-    padding-top: 600px;
-    
-
-    
-    
+    padding-top: 585px;
+    margin-bottom: 30px;  
 }
-main>h2{
-    font-family: var(--fonte);
+#inicio > a{
+    text-decoration: none;
+    background-color: var(--cor4);
 
+    color: black;
+    font-family: var(--fonte);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 5px;
+
+}
+#inicio>a:hover{
+    background-color: #0691b1;
+}
+
+
+section.inicioEmAlta>h2{
+    font-family: var(--fonte);
+    color: white;
     display: block;
     border-bottom: 1px solid var(--corDetalhe);
-    
 }
+
+@media screen and (max-width: 768px) {
+    #inicio{
+    height: 160px;
+    background-image: 
+    linear-gradient(to right, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to bottom, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to left, var(--corFundo) 0%, rgba(13, 13, 13, 0) 7%),
+    linear-gradient(to top, var(--corFundo) 10%, rgba(13, 13, 13, 0) 25%),
+    radial-gradient(circle at center center, transparent 75%, var(--corFundo) 90%),
+    url('imgs/como-treinar-o-seu-dragao-1.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding-bottom: 280px;
+    
+
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    }
+    #inicio > h1{
+    font-family: var(--fonte);
+    font-size: 1.8em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    text-shadow:  2px 2px 1px rgba(0, 0, 0, 0.342);
+    padding-top: 360px;
+    margin-bottom: 10px;  
+    }
+    #inicio > a{
+        text-decoration: none;
+        background-color: var(--cor4);
+
+        color: black;
+        font-family: var(--fonte);
+        font-size: 1em;
+        font-weight: bold;
+        padding: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 5px;
+
+    }
+    #inicio>a:hover{
+    background-color: #0691b1;
+    }
+    section.inicioEmAlta>h2{
+    font-family: var(--fonte);
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    border-bottom: 1px solid var(--corDetalhe);
+    }
+}
+
+/* ------------------ PÁGINA FILMES ------------------ */
 #Trending>img{
     border: 1px solid var(--corDetalhe);
     border-radius: 3px;
@@ -161,10 +303,21 @@ div.video>iframe{
     height: 90%;
     border-radius: 5px;
 }
+
+/* ------------------ PÁGINA STREAMINGS ------------------ */
+section.ListaStream>ul{
+    list-style: none;
+    padding-left: 0px;
+}
 section.str{
     padding-bottom: 15px;
     border-bottom: 1px solid var(--corDetalhe);
     margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
 
 }
 section.str>a>img{
@@ -173,9 +326,10 @@ section.str>a>img{
     
 }
 section.str>div{
-    display: inline-block;
+
     margin-left: 15px;
-    line-height: 0.8;
+    
+
 }
 section.str>div>a{
     color: white;
@@ -184,7 +338,7 @@ section.str>div>a{
     font-family: var(--fonte);
     font-weight: bold;
     font-size: 1.4em;
-    line-height: 0;
+
     position: relative;
     top: -10px; 
 
@@ -201,7 +355,8 @@ section.str>div>h4{
     font-family: var(--fonte);
     position: relative;
     top: -10px; /* sobe o bloco */
-
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 section.str>div>p{
@@ -210,5 +365,126 @@ section.str>div>p{
     position: relative;
     top: -10px;  
     margin-bottom: 0px;
+    margin-top: 0px;
+
+}
+.tela{
+    border: 2px solid var(--corDetalhe);
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ------------------ PÁGINA LOGIN ------------------ */
+
+section.login{
+        display: flex;
+        justify-content: center; /* centraliza horizontalmente */
+        flex-wrap: wrap;
+}
+#loginTitulo{
+    font-family: var(--fonte);
+    font-size: 2.4em;
+    color: white;
+    text-align: center;
+    border: none;
+}
+section.login fieldset{
+
+    border: none;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+section.login fieldset>h2{
+    font-family: var(--fonte);
+    color: aliceblue;
+    text-align: center;
+}
+section.login fieldset>div>p{
+    font-family: var(--fonte);
+
+}
+section.login fieldset>div>p>label{
+    font-family: var(--fonte);
+    font-size: 1.15em;
+}
+section.login fieldset>div>p>label.sexo{
+    font-family: var(--fonte);
+    margin-right: 60px;
+    color: white;
+}
+section.login fieldset>div>p>label.sexo:hover{
+    font-family: var(--fonte);
+    color: var(--cor4);
+}
+form>fieldset.CriarLogin{
+    border-right: 3px solid var(--corDetalhe);
+    padding-right: 150px;
+    margin-right: 150px;
+    padding-bottom: 77px;
+}
+section.login fieldset>div>p>input{
+    height: 40px;
+    background-color: var(--cor6);
+    border: none;
+    box-shadow: 0px 2px var(--corDetalhe);
+    border-radius: 5px;
+
+    padding-top: 5px;
+    padding-left: 10px;
+
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: white;
+    
+}
+section.login fieldset>div.total>p>input{
+    height: 40px;
+    width: 340px;
+    background-color: var(--cor6);
+    border: none;
+    box-shadow: 0px 2px var(--corDetalhe);
+    border-radius: 5px;
+
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-left: 10px;
+
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: white;
+    
+}
+section.login fieldset>div>p>input.sexoI{
+    height: auto;
+    
+    background-color: var(--cor6);
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+
+    padding-top: 5px;
+    padding-left: 10px;
+
+    margin-top: 10px;
+    
+}
+section.login fieldset>div>p>input:focus{
+ 
+    background-color: white;
+
+    color: black;
+}
+section.login fieldset>div.enviar>p>input{
+    width: 350px;
+    height: 40px;
+    background-color: var(--corDetalhe);
+    box-shadow: 0px 2px white;
+
+}
+section.login fieldset>div.enviar>p>input:hover{
+    background-color: var(--cor3);
+    box-shadow: 0px 2px var(--cor4);
+    
 
 }

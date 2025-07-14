@@ -4,53 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="favicon/">
     <link rel="stylesheet" href="style.css">
 </head>
 
 
-<body>
+<body class="inicioTela">
     <Header>
-        <nav>
+        <section class="header">
             <a href="/CHJS/MODULO2/EX003/index.html" id="logo"><img src="imgs/logo1.png" alt=""></a>
+            <div class="espaço"></div>
+            <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+            <nav class="menu">
+                <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
+                <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
+                <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
+                <a href="#" id="botao">Series</a>
+                <a href="login.html" id="botao">Login</a>
+            </nav>
+        </section>
+    </Header>
+    <div class="menuP"  id="itens">
+        <nav>
             <a href="/CHJS/MODULO2/EX003/pag002.html" id="botao"> Tools</a>
             <a href="/CHJS/MODULO2/EX003/streamings.html" id="botao">Streamings</a>
             <a href="/CHJS/MODULO2/EX003/filmes.html" id="botao">Filmes</a>
             <a href="#" id="botao">Series</a>
+            <a href="login.html" id="botao">Login</a>
         </nav>
-    </Header>
+    </div>
     <main>
-        <h1>Streamings</h1>
-        <h2>Em alta</h2>
+        <h1>Em alta</h1>
         <section class="ListaStream">
-            <section class="str">
-                <a href="/CHJS/MODULO2/EX003/disneyp.html"><img src="imgs/disney.png" alt=""></a>
-                <div>
-                    <a href="/CHJS/MODULO2/EX003/disneyp.html">disney+</a>
-                    <h4>Disney - Pixar - marvel - star wars - espn - star+</h4>
-                    <p>Filmes, série e esportes — Assine o Disney+ a partir de R$27,99 e tenha acesso a filmes, séries e esportes ao vivo.</p>
-                </div>
-            </section>
-            
-            <section class="str">
-                <a href="/CHJS/MODULO2/EX003/hbomax.html"><img src="imgs/max.png" alt=""></a>
-                <div>
-                    <a href="/CHJS/MODULO2/EX003/hbomax.html">HBO Max</a>
-                    <h4>HBO - Warner - DC - Cartoon Network - Game of Thrones</h4>
-                    <p>Conheça a HBO Max, o streaming que une tudo o que você mais ama da HBO com os seus filmes e séries favoritos, além dos Max Originals.</p>
-                </div>
-            </section>
-
-            <section class="str">
-                <a href="/CHJS/MODULO2/EX003/netflix.html"><img src="imgs/Netflix-Symbol.png" alt=""></a>
-                <div>
-                    <a href="/CHJS/MODULO2/EX003/netflix.html">Netflix</a>
-                    <h4>Netflix - Stranger Things - Bridgerton - The Witcher - Round 6 - La Casa de Papel</h4>
-                    <p>Assine a Netflix e aproveite uma grande variedade de séries, filmes, documentários e conteúdos exclusivos por apenas R$25,90/mês.</p>
-
-                </div>
-            </section>
+            <ul>
+                <li>
+                    <section class="str">
+                        <a href="https://www.disneyplus.com/pt-br/"><img src="imgs/disney.png" alt=""></a>
+                        <div>
+                            <a href="https://www.disneyplus.com/pt-br/" target="frame">disney+</a>
+                            <h4>Disney - Pixar - marvel - star wars - espn - star+</h4>
+                            <p>Filmes, série e esportes — Assine o Disney+ a partir de R$27,99 e tenha acesso a filmes, séries e esportes ao vivo.</p>
+                        </div>
+                    </section>
+                </li>
+                
+                <li>
+                    <section class="str">
+                        <a href="" target=""><img src="imgs/max.png" alt=""></a>
+                        <div>
+                            <a href="/CHJS/MODULO2/EX003/hbomax.html">HBO Max</a>
+                            <h4>HBO - Warner - DC - Cartoon Network - Game of Thrones</h4>
+                            <p>Conheça a HBO Max, o streaming que une tudo o que você mais ama da HBO com os seus filmes e séries favoritos, além dos Max Originals.</p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section class="str">
+                        <a href="/CHJS/MODULO2/EX003/netflix.html"><img src="imgs/Netflix-Symbol.png" alt=""></a>
+                        <div>
+                            <a href="/CHJS/MODULO2/EX003/netflix.html">Netflix</a>
+                            <h4>Netflix - Stranger Things - Bridgerton - The Witcher - Round 6 - La Casa de Papel</h4>
+                            <p>Assine a Netflix e aproveite uma grande variedade de séries, filmes, documentários e conteúdos exclusivos por apenas R$25,90/mês.</p>
+                        </div>
+                    </section>
+                </li>
+            </ul>
         </section>
+        <section ></section>
+        <iframe src="" frameborder="0" class="tela" name="frame"></iframe>
     </main>
+
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none';
+            }
+            else{
+                itens.style.display = 'flex';
+                header.style.borderBottom = "none";
+            }
+        }
+    </script>
 </body>
 </html>
